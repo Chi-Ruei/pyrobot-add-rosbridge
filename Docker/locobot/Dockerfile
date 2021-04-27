@@ -25,6 +25,7 @@ RUN echo "${USER}:111111" | chpasswd
 
 Run apt-get update && apt-get install -y curl lsb-release sudo software-properties-common
 
+
 ##################################### setting #####################################
 RUN chown -R ${USER}:${USER} ${HOME}/
 RUN echo "argsubt ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers
@@ -46,6 +47,7 @@ RUN ./locobot_install_all.sh -t full -p 2 -l interbotix
 
 RUN rm locobot_install_all.sh
 
+#RUN apt-get update && apt-get install -y python-pip
+
 RUN pip install gtsam
 
-RUN apt-get install ros-ROS_DISTRO-rosbridge-server

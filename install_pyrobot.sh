@@ -43,7 +43,8 @@ fi
 
 echo "Python $PYTHON_VERSION chosen for pyRobot installation."
 sudo apt-get -y install python-virtualenv
-sudo apt-get -y install ros-$ROS_NAME-orocos-kdl ros-$ROS_NAME-kdl-parser-py ros-$ROS_NAME-python-orocos-kdl ros-$ROS_NAME-trac-ik
+sudo apt-get -y install ros-$ROS_NAME-orocos-kdl ros-$ROS_NAME-kdl-parser-py ros-$ROS_NAME-python-orocos-kdl ros-$ROS_NAME-trac-ik ros-$ROS_NAME-rosbridge-server
+
 
 if [ $PYTHON_VERSION == "2" ]; then
 	virtualenv_name="pyenv_pyrobot_python2"
