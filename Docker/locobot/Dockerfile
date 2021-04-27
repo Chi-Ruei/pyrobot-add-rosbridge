@@ -48,3 +48,4 @@ RUN rm locobot_install_all.sh
 
 RUN pip install gtsam
 
+RUN apt-get install ros-ROS_DISTRO-rosbridge-server

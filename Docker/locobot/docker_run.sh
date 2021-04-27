@@ -84,5 +84,5 @@ docker run \
     --privileged \
     --security-opt seccomp=unconfined \
     $DOCKER_OPTS \
-    argnctu/locobot:pyrobot \
+    argnctuvr/locobot:pyrobot \
     $BASH_OPTION
