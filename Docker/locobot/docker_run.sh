@@ -72,17 +72,16 @@ docker run \
     -e ROS_MASTER_URI=$ROS_MASTER_URI \
     -e ROS_IP=$ROS_IP \
     -v "$XAUTH:$XAUTH" \
-    -v "/home/$USER/pyrobot/examples:/home/argsubt/examples" \
+    -v "/home/$USER/pyrobot-add-rosbridge/examples:/home/argsubt/examples" \
     -v "/home/$USER/low_cost_ws_my:/home/argsubt/low_cost_ws_my" \
     -v "/tmp/.X11-unix:/tmp/.X11-unix" \
     -v "/etc/localtime:/etc/localtime:ro" \
     -v "/dev:/dev" \
     -v "/var/run/docker.sock:/var/run/docker.sock" \
-    -v "/home/$USER/.bashrc:/home/argsubt/.bashrc" \
     --name argsubt \
     --network host \
     --privileged \
     --security-opt seccomp=unconfined \
     $DOCKER_OPTS \
-    argnctuvr/locobot:pyrobot \
+    argnctu/locobot:vr \
     $BASH_OPTION
